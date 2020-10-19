@@ -158,9 +158,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53d51603587232844bab026904bfa187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCannon1: 0
   isBeingControlled: 0
   rotateSpeed: 40
-  velocity: 1
+  velocityMult: 1
+  cannonball: {fileID: 4877103403581483816, guid: acd9b661de44c9e49b28f2463cd145e0,
+    type: 3}
   controlCannonText: {fileID: 0}
   velocityText: {fileID: 1174738518}
 --- !u!23 &177912802
@@ -779,9 +782,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53d51603587232844bab026904bfa187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCannon1: 1
   isBeingControlled: 1
   rotateSpeed: 40
-  velocity: 1
+  velocityMult: 1
+  cannonball: {fileID: 4877103403581483816, guid: acd9b661de44c9e49b28f2463cd145e0,
+    type: 3}
   controlCannonText: {fileID: 1075359076}
   velocityText: {fileID: 1174738518}
 --- !u!23 &1740560398
