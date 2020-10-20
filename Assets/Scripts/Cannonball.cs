@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Cannonball : MonoBehaviour {
     public float gravity = -9.81f;
-    public float secondsLeft = 5;
+    public float secondsLeft = 10;
 
     // The two variables underneath must be set by another script when the cannon ball is created
     [HideInInspector]
@@ -17,6 +17,7 @@ public class Cannonball : MonoBehaviour {
     private float cannonLength = 2.5f;
     private float speedX;
     private float speedY;
+    private bool hittingValley = false;
 
     private void Start() {
         int direction_X = shootRight ? 1 : -1;
@@ -31,8 +32,6 @@ public class Cannonball : MonoBehaviour {
 
         speedX = magnitude * x_norm;
         speedY = magnitude * y_norm;
-
-
     }
 
     private void Update() {
@@ -43,5 +42,24 @@ public class Cannonball : MonoBehaviour {
 
         transform.position += new Vector3(speedX, speedY, 0) * Time.deltaTime;
         speedY += gravity * Time.deltaTime;
+
+        Debug.DrawRay(transform.position, new Vector3(speedX, speedY, 0), Color.grey);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector3(speedX, speedY, 0), 0.1f);
+        if (hit.collider != null && !hittingValley) {
+            hittingValley = true;
+
+            if (hit.collider.gameObject.CompareTag("Valley")) {
+                speedX = 0;
+                speedY = 0;
+            } else if (hit.collider.gameObject.CompareTag("Water")) {
+                gameObject.SetActive(false);
+            }
+        }
+
+        float pos_x = transform.position.x;
+        float pos_y = transform.position.y;
+        if (pos_x < 0 || pos_x > 18 || pos_y < 0 || pos_y > 10) {
+            gameObject.SetActive(false);
+        }
     }
 }

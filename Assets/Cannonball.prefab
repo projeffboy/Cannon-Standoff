@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravity: -9.81
-  timeLeft: 5
+  secondsLeft: 10
   speedMult: 1
   degAngle: 90
+  shootRight: 1
