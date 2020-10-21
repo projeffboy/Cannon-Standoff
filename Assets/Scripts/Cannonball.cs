@@ -59,6 +59,8 @@ public class Cannonball : MonoBehaviour {
                     speedY *= -restitutionCoefficient;
                 } else if (hit.collider.gameObject.CompareTag("Water")) {
                     gameObject.SetActive(false);
+                } else if (hit.collider.gameObject.CompareTag("Balloon Head")) {
+                    hit.collider.transform.parent.gameObject.SetActive(false);
                 }
             }
 

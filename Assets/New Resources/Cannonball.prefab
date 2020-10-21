@@ -95,6 +95,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravity: -9.81
+  baseSpeed: 5
+  restitutionCoefficient: 0.6
   secondsLeft: 10
   speedMult: 1
   degAngle: 90
