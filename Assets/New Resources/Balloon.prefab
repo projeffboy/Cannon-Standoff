@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balloonSpeed: 1.75
+  head: {fileID: 6502902110296899119}
+  tail: {fileID: 3023610607439383708}
   windScript: {fileID: 0}
 --- !u!70 &96842345395893340
 CapsuleCollider2D:
@@ -188,13 +190,19 @@ PrefabInstance:
     - target: {fileID: 2176376649834807839, guid: b44e8d4fe9c6741428aa8233c5ec4442,
         type: 3}
       propertyPath: m_Name
-      value: Line
+      value: Tail
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b44e8d4fe9c6741428aa8233c5ec4442, type: 3}
 --- !u!4 &3023610607439383711 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2176376649834807838, guid: b44e8d4fe9c6741428aa8233c5ec4442,
+    type: 3}
+  m_PrefabInstance: {fileID: 4017790154908159617}
+  m_PrefabAsset: {fileID: 0}
+--- !u!120 &3023610607439383708 stripped
+LineRenderer:
+  m_CorrespondingSourceObject: {fileID: 2176376649834807837, guid: b44e8d4fe9c6741428aa8233c5ec4442,
     type: 3}
   m_PrefabInstance: {fileID: 4017790154908159617}
   m_PrefabAsset: {fileID: 0}
@@ -401,6 +409,12 @@ GameObject:
 --- !u!4 &6502902110296899116 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2176376649834807838, guid: b44e8d4fe9c6741428aa8233c5ec4442,
+    type: 3}
+  m_PrefabInstance: {fileID: 4903003873758264370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!120 &6502902110296899119 stripped
+LineRenderer:
+  m_CorrespondingSourceObject: {fileID: 2176376649834807837, guid: b44e8d4fe9c6741428aa8233c5ec4442,
     type: 3}
   m_PrefabInstance: {fileID: 4903003873758264370}
   m_PrefabAsset: {fileID: 0}
