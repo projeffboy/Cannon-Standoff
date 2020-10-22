@@ -61,6 +61,9 @@ public class Cannonball : MonoBehaviour {
                     gameObject.SetActive(false);
                 } else if (hit.collider.gameObject.CompareTag("Balloon Head")) {
                     hit.collider.transform.parent.gameObject.SetActive(false);
+                } else if (hit.collider.gameObject.CompareTag("Balloon Tail")) {
+                    Balloon balloonScript = hit.collider.transform.parent.GetComponent<Balloon>();
+                    balloonScript.cannonHitsTail = true;
                 }
             }
 

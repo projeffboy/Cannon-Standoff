@@ -7,6 +7,7 @@ public class SpawnBalloons : MonoBehaviour {
     public Wind windScript;
 
     private void Start() {
+        // SpawnBalloon();
         StartCoroutine(Repeat());
     }
 
@@ -20,7 +21,7 @@ public class SpawnBalloons : MonoBehaviour {
     private void SpawnBalloon() {
         GameObject balloonObj = Instantiate(
             balloon,
-            new Vector3(Random.Range(5.5f, 12.5f), 2, 0),
+            new Vector3(Random.Range(6, 12), 2, 0),
             Quaternion.identity
         );
 
